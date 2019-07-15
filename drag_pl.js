@@ -16,7 +16,6 @@
 				readFile(this, event);
 	    	});
 
-
     		dragAndDrop.click(function(){
 				form[0].reset();
 			})
@@ -87,9 +86,6 @@
 				});
 				return imgSrcArr;
 			}	
-
-
-
 	    }
     });
  	

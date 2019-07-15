@@ -1,0 +1,142 @@
+.dragAndDrop-container {	
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+.dragAndDrop-wrapper {
+    position: relative;
+    width: 100%;
+    height: 150px;
+}
+.dragAndDrop-wrapper > label[for="dragAndDrop"] {
+    border: 2px dashed #91b0b3;
+    color: #92b0b3;
+    position: absolute;
+    height: 100%;
+    width: 100%;	
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.dragAndDrop-wrapper:hover > label[for="dragAndDrop"] {
+    background: rgba(173,223,238,0.3);
+    border-color: rgba(173,223,238, 0.8);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(173,223,238,0.5);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(173,223,238,0.5);
+    box-shadow: 0px 0px 10px 1px rgba(173,223,238,0.5);
+    /*transition: 0.5s;*/
+}
+.dragAndDrop-wrapper #dragAndDrop, .dragAndDrop-wrapper #dragAndDrop:focus {
+    position: absolute;
+    outline: none !important;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+    /*visibility: hidden;*/
+
+}
+.dragAndDrop-container #images-preview {
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+/* scrollbar style */
+
+.dragAndDrop-container #images-preview::-webkit-scrollbar-track
+{
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 3px;
+	background-color: #F5F5F5;
+}
+
+.dragAndDrop-container #images-preview::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+.dragAndDrop-container #images-preview::-webkit-scrollbar-thumb
+{
+    border-radius: 3px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #ccc;
+}
+/* end */
+
+.dragAndDrop-container #images-preview:before, 
+.dragAndDrop-container #images-preview:after {
+    /* content: "";
+    clear: both;
+    display: table; */
+}
+.dragAndDrop-container #images-preview .full-wrapp {
+    width: calc(100% - 5px);
+    border: 2px dashed rgba(173,223,238,0.5);
+    border-radius: 3px;
+    margin-left: 0px;
+    margin-right: 5px; 
+    margin-bottom: 3px;
+    padding-right: 10px;
+
+}
+.dragAndDrop-container #images-preview .full-wrapp:before, 
+.dragAndDrop-container #images-preview .full-wrapp:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.dragAndDrop-container #images-preview .image-box{
+    /* width: calc(33.33% - 4px); */
+    width: 30%;
+    height: 110px;
+    float: left;
+    position: relative;
+}
+.inputs-wrapp {
+    width: 65%;
+    float: right;
+}
+.dragAndDrop-container #images-preview .image{
+    /* height: 100%;
+    width: 100%; */
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding: 5px;
+}
+.dragAndDrop-container #images-preview .image-preview-name{
+
+}
+
+.dragAndDrop-container #images-preview .delete-image {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #ff6961;
+}
+
+.dragAndDrop-container #images-preview .image-name {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 5px;
+    color: #555;
+    font-size: 14px;
+    font-style: italic;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
